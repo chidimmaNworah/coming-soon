@@ -28,63 +28,50 @@ html(lang='en')
 
         // Background Video
         video.bg-video(playsinline='playsinline', autoplay='autoplay', muted='muted', loop='loop')
-            source(src='assets/mp4/bg.mp4', type='video/mp4')
+            source(src='assets/mp4/bg1.mp4', type='video/mp4')
 
         // Masthead
         .masthead
             .masthead-content.text-white
                 .container-fluid.px-4.px-lg-0
-                    h1.fst-italic.lh-1.mb-4 Our Website is Coming Soon
+                    h1.fst-italic.lh-1.mb-4 Our Website is Under Maintenance
                     p.mb-5
-                        | We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!
+                        | We're working hard to finish the development of this site.
                     
-                    // * * * * * * * * * * * * * * *
-                    // * * SB Forms Contact Form * *
-                    // * * * * * * * * * * * * * * *
+                    //- Google Forms Integration
+                    //- Replace FORM_ID and entry.XXXXX with your actual Google Form values
 
-                    // This form is pre-integrated with SB Forms.
-                    // To make this form functional, sign up at
-                    // https://startbootstrap.com/solution/contact-forms
-                    // to get an API token!
+                    //- form#contactForm(action='https://docs.google.com/forms/d/e/FORM_ID/formResponse', method='POST', target='hidden_iframe')
 
-                    form#contactForm(data-sb-form-api-token='API_TOKEN')
+                        //- Email address input
 
-                        // Email address input
+                        //- .row.input-group-newsletter
+                            //- .col
+                                //- input#email.form-control(
+                                    //- name='entry.XXXXX',
+                                    //- type='email',
+                                    //- placeholder='Enter email address...',
+                                    //- aria-label='Enter email address...',
+                                    //- required
+                                //- )
+                            //- .col-auto
+                                //- button#submitButton.btn.btn-primary(type='submit') Notify Me!
+                        //- #emailError.invalid-feedback.mt-2
+                            //- | Please enter a valid email address.
 
-                        .row.input-group-newsletter
-                            .col
-                                input#email.form-control(
-                                    type='email',
-                                    placeholder='Enter email address...',
-                                    aria-label='Enter email address...',
-                                    data-sb-validations='required,email'
-                                )
-                            .col-auto
-                                button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
-                        .invalid-feedback.mt-2(data-sb-feedback='email:required')
-                            | An email is required.
-                        .invalid-feedback.mt-2(data-sb-feedback='email:email')
-                            | Email is not valid.
+                        //- Submit success message
 
-                        // Submit success message
-                        //
-                        // This is what your users will see when the form
-                        // has successfully submitted
+                        //- #submitSuccessMessage.d-none
+                            //- .text-center.mb-3.mt-2
+                                //- .fw-bolder Thank you for subscribing!
+                                //- | We'll notify you when we launch.
 
-                        #submitSuccessMessage.d-none
-                            .text-center.mb-3.mt-2
-                                .fw-bolder Form submission successful!
-                                | To activate this form, sign up at
-                                br
-                                a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+                        //- Submit error message
 
-                        // Submit error message
-                        //
-                        // This is what your users will see when there is
-                        // an error submitting the form
-
-                        #submitErrorMessage.d-none
-                            .text-center.text-danger.mb-3.mt-2 Error sending message!
+                        //- #submitErrorMessage.d-none
+                            //- .text-center.text-danger.mb-3.mt-2 Error sending message!
+                    
+                    //- iframe#hidden_iframe(name='hidden_iframe', style='display:none;')
 
         // Social Icons
         // For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands
@@ -102,10 +89,3 @@ html(lang='en')
 
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
