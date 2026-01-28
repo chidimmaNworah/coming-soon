@@ -4,10 +4,12 @@ import Link from "next/link";
 import { Menu, X, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,20 +31,34 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 dark:bg-dark-900/95 backdrop-blur-sm shadow-lg py-4"
+          ? theme === "dark"
+            ? "bg-gray-900 backdrop-blur-sm shadow-lg py-4"
+            : "bg-white backdrop-blur-sm shadow-lg py-4"
           : "bg-transparent py-6"
       }`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
           {/* Logo */}
+
           <Link href="/" className="flex items-center space-x-2 group">
-            <img src="/logo.jpeg" alt="AgeGroup Logo" className="h-12 w-auto" />
+            <img
+              src="/logo.png"
+              alt="AgeGroup Logo"
+              className="h-12 w-auto rounded-full"
+            />
+            <span
+              className={
+                scrolled ? "text-xl font-bold" : "text-xl font-bold text-white"
+              }
+            >
+              AbundantGraceElectricals
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {/* {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -52,7 +68,7 @@ export default function Navbar() {
               >
                 {link.label}
               </a>
-            ))}
+            ))} */}
             <ThemeToggle />
             <a href="#contact" className="btn btn-primary">
               Get Quote

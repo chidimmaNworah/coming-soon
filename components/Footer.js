@@ -9,9 +9,11 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { theme } = useTheme();
 
   const services = [
     "Electrical Installation",
@@ -35,17 +37,24 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-dark-900 dark:bg-black text-white">
+    <footer
+      className={
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
+      }
+    >
       <div className="container section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-2 rounded-lg">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="AgeGroup Logo"
+                className="h-12 w-auto rounded-full"
+              />
               <span className="text-xl font-bold">
-                Age<span className="text-primary-500">Group</span>NG
+                Abundant<span className="text-primary-500">Grace</span>
+                Electricals
               </span>
             </Link>
             <p className="text-dark-400 dark:text-dark-500 mb-4">
@@ -67,7 +76,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-bold mb-4">Our Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
@@ -81,10 +90,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -98,7 +107,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
@@ -107,7 +116,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" />
                 <span className="text-dark-400 dark:text-dark-500">
-                  Lagos, Nigeria
+                  Addulsalami Abubakar Road, Gudu 900110, Abuja, Nigeria, 900110
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -116,16 +125,16 @@ export default function Footer() {
                   href="tel:+234"
                   className="text-dark-400 dark:text-dark-500 hover:text-primary-500 transition-colors"
                 >
-                  +234 XXX XXX XXXX
+                  +234 706 860 7976
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-500 flex-shrink-0" />
                 <a
-                  href="mailto:info@agegroupng.com"
+                  href="mailto:agegroupng@gmail.com"
                   className="text-dark-400 dark:text-dark-500 hover:text-primary-500 transition-colors"
                 >
-                  info@agegroupng.com
+                  agegroupng@gmail.com
                 </a>
               </li>
             </ul>
