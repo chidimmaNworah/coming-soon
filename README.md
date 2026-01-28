@@ -1,53 +1,153 @@
-# [Start Bootstrap - Coming Soon](https://startbootstrap.com/theme/coming-soon/)
+# AgeGroupNG - Electrical & Lighting Solutions
 
-[Coming Soon](https://startbootstrap.com/theme/coming-soon/) is a simple coming soon theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a background video with a mobile background image fallback.
+A modern, responsive Next.js landing page for AgeGroupNG, a leading electrical and lighting company in Nigeria.
 
-## Preview
+## 🚀 Features
 
-[![Coming Soon Preview](https://assets.startbootstrap.com/img/screenshots/themes/coming-soon.png)](https://startbootstrap.github.io/startbootstrap-coming-soon/)
+- **Modern Design**: Clean, professional UI with smooth animations
+- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Performance Optimized**: Built with Next.js 15 and React 19
+- **SEO Ready**: Comprehensive meta tags and structured data
+- **Smooth Animations**: Framer Motion for engaging user experience
+- **Contact Form**: Integrated contact form for lead generation
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-coming-soon/)**
+## 🛠️ Tech Stack
 
-## Status
+- **Framework**: Next.js 15.0.5
+- **UI Library**: React 19.0.0
+- **Styling**: Tailwind CSS 4.0
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & React Icons
+- **Fonts**: Inter & Poppins (Google Fonts)
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-coming-soon/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-coming-soon.svg)](https://www.npmjs.com/package/startbootstrap-coming-soon)
+## 📦 Installation
 
-## Download and Installation
+1. **Install dependencies**:
 
-To begin using this template, choose one of the following options to get started:
+```bash
+npm install --legacy-peer-deps
+```
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/coming-soon/)
-* Install via npm: `npm i startbootstrap-coming-soon`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-coming-soon.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-coming-soon)
+2. **Run development server**:
 
-## Usage
+```bash
+npm run dev
+```
 
-### Basic Usage
+3. **Open browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-After downloading, simply edit the HTML and CSS files included with `dist` directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+## 🏗️ Project Structure
 
-### Advanced Usage
+```
+agegroup/
+├── components/          # React components
+│   ├── Navbar.js       # Navigation bar
+│   ├── Hero.js         # Hero section
+│   ├── Services.js     # Services showcase
+│   ├── About.js        # About company
+│   ├── Products.js     # Product catalog
+│   ├── Contact.js      # Contact form
+│   ├── Footer.js       # Footer
+│   └── SEO.js          # SEO component
+├── pages/              # Next.js pages
+│   ├── _app.js         # App wrapper
+│   ├── _document.js    # Document structure
+│   └── index.js        # Home page
+├── styles/             # Global styles
+│   └── globals.css     # Tailwind & custom CSS
+├── public/             # Static assets
+└── package.json        # Dependencies
+```
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+## 🎨 Key Sections
 
-#### npm Scripts
+### Hero Section
 
-* `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-* `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
-* `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
-* `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
-* `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
-* `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
-* `npm run start:debug` runs the project in debug mode
-* `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
+- Eye-catching headline with gradient text
+- Call-to-action buttons
+- Animated statistics
+- Floating cards with social proof
 
-You must have npm installed in order to use this build environment.
+### Services Section
 
-### Signup Form
+- 6 comprehensive service offerings
+- Icon-based cards with hover effects
+- Detailed feature lists
+- CTA for service requests
 
-The signup form available with this theme is prebuilt to use [SB Forms](https://startbootstrap.com/solution/contact-forms).
+### About Section
+
+- Company introduction
+- Core values with icons
+- Team statistics
+- Trust indicators
+
+### Products Section
+
+- 6 product categories
+- Organized product listings
+- Hover effects
+- Catalog request CTA
+
+### Contact Section
+
+- Multi-field contact form
+- Contact information cards
+- Business hours
+- Form validation
+
+## 🎨 Customization
+
+### Colors
+
+Edit `tailwind.config.js` to change theme colors:
+
+```js
+colors: {
+  primary: {
+    500: '#f59e0b', // Main brand color
+    // ... other shades
+  }
+}
+```
+
+### Content
+
+- **Company Info**: Update in `components/Footer.js`
+- **Services**: Modify in `components/Services.js`
+- **Products**: Edit in `components/Products.js`
+- **Contact Details**: Change in `components/Contact.js` and `components/Footer.js`
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+### Deploy to Vercel
+
+```bash
+vercel
+```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📄 License
+
+MIT License
+
+---
+
+Built with ⚡ by AgeGroupNG Team
 SB Forms is a simple form solution for adding functional forms to your theme. Since this theme is prebuilt using our
 SB Forms markup, all you need to do is sign up for [SB Forms on Start Bootstrap](https://startbootstrap.com/solution/contact-forms).
 
@@ -66,14 +166,14 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+- <https://startbootstrap.com>
+- <https://twitter.com/SBootstrap>
 
 Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
 
-* <https://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
+- <https://davidmiller.io>
+- <https://twitter.com/davidmillerhere>
+- <https://github.com/davidtmiller>
 
 Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
